@@ -27,3 +27,38 @@
 .navbar-left img{
     width: 90px;
 }
+.navbar-right{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-left: 20px;
+    margin-right: 70px;
+}
+.profile-icon{
+   display: flex;
+   align-items: center;
+   position: relative;
+   cursor: pointer;
+}
+.dropdown{
+    margin-left: 5px;
+    cursor: pointer;
+}
+.dropText{
+position: absolute;
+top: 100%;
+right: 0;
+background-color: rgb(184, 171, 171);
+color: white;
+border-radius: 5px;
+font-size: 15px;
+z-index: 1;
+display: none;
+}
+.dropText a{
+    text-decoration: none;
+    color: white;
+}
+.profile-icon:hover .dropText{
+    display: block;
+}
