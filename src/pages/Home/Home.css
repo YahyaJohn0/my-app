@@ -1,54 +1,79 @@
-.hero-banner{
-position: relative;
-}
-.bannerimg{
+.hero-banner {
+    position: relative;
+    /* Adding a gradient overlay from the left */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 70%), url('../../assets/hero_banner.jpg');
+    background-size: cover;
+    background-position: center;
     width: 100%;
+    height: 100vh; /* Adjust the height as needed */
 }
-.hero-title{
+
+.bannerimg {
+    display: none; /* Hide the img tag since we're using the image as a background */
+}
+
+.hero-title {
     position: absolute;
     bottom: 0;
     padding-bottom: 200px;
     padding-left: 50px;
-   
-    }
-.hero-title p{
-color: white;
-font-size: 19px;
-    }
-
-.titleimage{
-margin-bottom: 30px;
+    z-index: 1; /* Ensure content appears above the gradient */
 }
-.playbtn{
+
+.titleimage {
+    margin-bottom: 30px;
+    max-width: 100%;
+    height: auto;
+}
+
+.hero-title p {
+    color: white;
+    font-size: 19px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.playbtn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     width: 90px;
-    padding-left: 8px;
+    padding: 10px;
     border-radius: 5px;
+    background-color: #e50914;
     border: none;
     outline: none;
     cursor: pointer;
     margin-top: 15px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
 }
-.playbtn img{
-   height: 30px;
 
+.playbtn img {
+    height: 20px;
+    margin-right: 5px;
 }
-.infobtn{
+
+.infobtn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
+    width: 120px;
+    padding: 10px;
+    background-color: rgb(95, 95, 95);
+    border-radius: 5px;
     border: none;
     outline: none;
     cursor: pointer;
     margin-top: 15px;
     margin-left: 20px;
-    width: 120px;
-    background-color: rgb(95, 95, 95);
-    border-radius: 5px;
     color: white;
+    font-size: 16px;
+    font-weight: bold;
 }
-.infobtn img{
-    height: 30px;
-    background-color: rgb(95, 95, 95);
-    border-radius: 5px;
+
+.infobtn img {
+    height: 20px;
+    margin-right: 5px;
 }
