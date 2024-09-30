@@ -2,4 +2,16 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     margin: 20px auto ;
+    justify-items: center;
+    row-gap: 20px;
+    background-color: rgb(21, 65, 104);
+}
+.cards{
+    
+}
+.Cards-title h2{
+    text-align: center;
+    margin-top: 20px;
+}.cards img{
+    border-radius:5px ;
 }
