@@ -1,0 +1,43 @@
+.Footer{
+margin-top: 50px;
+border-top: 1px solid white;
+}
+.Footer_icons{
+    margin-left: 90px;
+    margin-top: 30px;
+
+    
+}
+.Footer_icons img{
+    width: 35px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.Footer ul{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-items: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.Footer ul li{
+    list-style: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.Footer .copyrighttext{
+    display: flex;
+    justify-content: space-between;
+}
+.Footer .copyrighttext #left{
+    font-size: 13px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    
+}
+.Footer .copyrighttext #right{
+    font-size: 13px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    
+}

@@ -6,8 +6,10 @@ import play_icon from '../../assets/play_icon.png'
 import info_icon from '../../assets/info_icon.png'
 import Title from '../../components/TitleCard/Title'
 import './Home.css'
+import Footer from '../../components/Footer/Footer'
 const Home = () => {
   return (
+  <>
     <div className='home'>
       <Navbar/>
       <div className="hero-banner">
@@ -22,6 +24,8 @@ const Home = () => {
       </div>
       <Title/>
     </div>
+    <Footer />
+  </>
   )
 }
 

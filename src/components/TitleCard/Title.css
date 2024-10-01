@@ -5,13 +5,20 @@
     justify-items: center;
     row-gap: 20px;
     background-color: rgb(21, 65, 104);
+    color: white;
+    margin-bottom: 100px;
+
 }
-.cards{
-    
+body{
+    background-color: rgb(21, 65, 104) ;
 }
 .Cards-title h2{
     text-align: center;
     margin-top: 20px;
+    color: white;
 }.cards img{
     border-radius:5px ;
+}
+.cards{
+   
 }
