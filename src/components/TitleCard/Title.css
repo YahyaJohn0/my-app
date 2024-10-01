@@ -17,8 +17,13 @@ body{
     margin-top: 20px;
     color: white;
 }.cards img{
+    width: 400px;
     border-radius:5px ;
+    cursor: pointer;
 }
-.cards{
-   
+
+.cards img:hover{
+    width: 401px;
+    border-radius:5px ;
+    cursor: pointer;
 }
