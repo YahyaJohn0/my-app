@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import cards from '../../assets/cards/Cards_data'
-
+import { Link } from 'react-router-dom';
 import './Title.css'
 
 const Title = () => {
@@ -21,7 +20,7 @@ const Title = () => {
       .then(response => response.json())
       .then(response => setApiData(response.results))
       .catch(err => console.error(err));
-    },[])
+    })
   return (
     <div>
         <div className="Cards-title">
@@ -29,9 +28,9 @@ const Title = () => {
         </div>
         <div className="card-list">
             {apiData.map((data,index)=>{
-                return <div className="cards" key={index}> <img src={`https://image.tmdb.org/t/p/w500`+data.backdrop_path} alt="" />
+                return <Link  to={`/Player/${data.id}`} className="cards" key={index}> <img src={`https://image.tmdb.org/t/p/w500`+data.backdrop_path} alt="" />
                 <p >{data.original_title}</p>
-                </div>
+                </Link>
             })}
         </div>
     </div>
