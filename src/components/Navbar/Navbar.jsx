@@ -1,40 +1,55 @@
-import React from 'react'
-import logo from '../../assets/logo.png'
-import profile from '../../assets/profile_img.png'
-import bell_icon from '../../assets/bell_icon.svg'
-import './Navbar.css'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
+import logo from '../../assets/logo.png';
+import profile from '../../assets/profile_img.png';
+import './Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import {faBellConcierge} from '@fortawesome/free-solid-svg-icons'
-import {faCaretDown} from '@fortawesome/free-solid-svg-icons'
+import { faMagnifyingGlass, faBellConcierge, faCaretDown, faBars } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
-  return (
-    <div>
-      <div className="Nav-bar">
-        <div className="navbar-left">
-            <img src={logo} alt="" />
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Tv Shows</a></li>
-                <li><a href="#">Movies</a></li>
-                <li><a href="#">New & Popular</a></li>
-                <li><a href="#">My List</a></li>
-            </ul>
+    const navigate = useNavigate(); 
+    const [menuOpen, setMenuOpen] = useState(false); // State to manage menu visibility
+
+    const handleSignOut = () => {
+        localStorage.removeItem('token'); 
+        navigate('/login'); 
+    };
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen); // Toggle menu visibility
+    };
+
+    return (
+        <div>
+            <div className="Nav-bar">
+                <div className="navbar-left">
+                    <img src={logo} alt="Logo" />
+                    <div className={`menu ${menuOpen ? 'active' : ''}`}>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Tv Shows</a></li>
+                            <li><a href="#">Movies</a></li>
+                            <li><a href="#">New & Popular</a></li>
+                            <li><a href="#">My List</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="navbar-right">
+                    <FontAwesomeIcon icon={faMagnifyingGlass} className='searchicon' />
+                    <FontAwesomeIcon icon={faBellConcierge} />
+                    <p>Kids</p>
+                    <div className="profile-icon">
+                        <img src={profile} alt="Profile" className='profile' />
+                        <FontAwesomeIcon icon={faCaretDown} className='dropdown' />
+                        <p className='dropText' onClick={handleSignOut}>Sign Out</p>
+                    </div>
+                    <div className="hamburger" onClick={toggleMenu}>
+                        <FontAwesomeIcon icon={faBars} />
+                    </div>
+                </div>
+            </div>
         </div>
-        <div className="navbar-right">
-        <FontAwesomeIcon icon={faMagnifyingGlass} className='searchicon'/>
-        <FontAwesomeIcon icon={faBellConcierge} />
-          <p>Kids</p>
-          <div className="profile-icon">
-          <img src={profile} alt="" className='profile' />
-          <FontAwesomeIcon icon={faCaretDown} className='dropdown' />
-           <p className='dropText'><a href="#">SignOut</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
+    );
 }
 
-export default Navbar
+export default Navbar;

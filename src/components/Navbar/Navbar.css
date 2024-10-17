@@ -63,3 +63,56 @@ display: none;
 .profile-icon:hover .dropText{
     display: block;
 }
+
+/* Media Query for small screens */
+@media (max-width: 768px) {
+    .Nav-bar {
+        justify-content: space-between; /* Align hamburger, logo, and search icon properly */
+        position: relative;
+    }
+
+    .navbar-left {
+        width: auto; /* Adjust width to fit the elements */
+    }
+
+    .navbar-left img {
+        margin: 0; /* Align logo to the left */
+    }
+
+    .navbar-left ul {
+        display: none; /* Hide menu by default */
+        flex-direction: column; /* Vertical layout */
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.8);
+        top: 60px; /* Adjust as per navbar height */
+        left: 0;
+        width: 100%; /* Full width */
+    }
+
+    .navbar-left ul.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .navbar-right {
+        display: none; /* Hide right elements for small screens */
+    }
+
+    .search-icon {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .hamburger {
+        display: flex;
+        cursor: pointer;
+        font-size: 24px;
+        color: white;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
