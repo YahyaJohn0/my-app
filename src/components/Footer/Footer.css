@@ -41,3 +41,28 @@ border-top: 1px solid white;
     margin-bottom: 10px;
     
 }
+@media only screen and (max-width: 600px) {
+    .Footer_icons {
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    .Footer_icons img {
+        width: 30px;
+        margin-left: 5px;
+    }
+
+    .Footer ul {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .Footer .copyrighttext {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .Footer .copyrighttext #left,
+    .Footer .copyrighttext #right {
+        margin: 5px 0;
+    }
+}
