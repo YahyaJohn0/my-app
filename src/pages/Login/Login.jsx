@@ -9,25 +9,25 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 
+const firebaseConfig = {
+  apiKey: "AIzaSyBKYy4smEJAMrifOm1fZzj_UZBQsxDjCuQ",
+  authDomain: "netflixapp-f71e2.firebaseapp.com",
+  projectId: "netflixapp-f71e2",
+  storageBucket: "netflixapp-f71e2.appspot.com",
+  messagingSenderId: "363142530098",
+  appId: "1:363142530098:web:aa542a9add2dd58818282b",
+  measurementId: "G-7MPFXQ40EZ",
+};
+
+ const app = initializeApp(firebaseConfig);
+ const auth = getAuth(app);
+
 const Login = () => {
   const [authAction, setAuthAction] = useState("SignUp");
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyBKYy4smEJAMrifOm1fZzj_UZBQsxDjCuQ",
-    authDomain: "netflixapp-f71e2.firebaseapp.com",
-    projectId: "netflixapp-f71e2",
-    storageBucket: "netflixapp-f71e2.appspot.com",
-    messagingSenderId: "363142530098",
-    appId: "1:363142530098:web:aa542a9add2dd58818282b",
-    measurementId: "G-7MPFXQ40EZ",
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const auth = getAuth(app);
 
 
   const handleSignUp = (email, password) => {
@@ -103,4 +103,4 @@ const Login = () => {
 );
 };
 
-export default Login;
+export {Login,auth};

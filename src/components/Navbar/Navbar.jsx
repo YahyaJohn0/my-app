@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 import logo from "../../assets/logo.png";
-import profile from "../../assets/profile_img.png";
+import ProfileImg from "../../assets/profile_img.png";
 import "./Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
@@ -24,7 +24,9 @@ const Navbar = () => {
   const toggleMenu = () => {
     setMenuOpen(!menu);
   };
-
+  const profile = () => {
+    navigate('/ProfileSettings');
+  };
   return (
     <div>
       <div className="Nav-bar">
@@ -47,6 +49,16 @@ const Navbar = () => {
               <li>
                <Link to={'/ProfileSettings'}>My List</Link>
               </li>
+              <div className="profile-icon1">
+              <div className="small-screen-profile">
+              <p className="dropprofile1" onClick={profile}>
+                profile
+                </p>
+            <p className="dropText1" onClick={handleSignOut}>
+                SignOut
+            </p>
+              </div>
+          </div>
             </ul>
           </div>
         </div>
@@ -55,11 +67,16 @@ const Navbar = () => {
           <FontAwesomeIcon icon={faBellConcierge} className="bellicon" />
           <p>Kids</p>
           <div className="profile-icon">
-            <img src={profile} alt="Profile" className="profile" />
+            <img src={ProfileImg} alt="Profile" className="profile" />
             <FontAwesomeIcon icon={faCaretDown} className="dropdown" />
+           <div className="drop-menu">
+           <p className="dropprofile" onClick={profile}>
+             profile
+            </p>
             <p className="dropText" onClick={handleSignOut}>
               SignOut
             </p>
+           </div>
           </div>
           <div className="hamburger" onClick={toggleMenu}>
             <FontAwesomeIcon icon={faBars} />

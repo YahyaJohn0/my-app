@@ -44,6 +44,7 @@ const ProfileSettings = () => {
 
   return (
     <div className="profile-settings-container">
+     
       {/* Background Image */}
       <div className="background-image" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <label className="upload-label">
