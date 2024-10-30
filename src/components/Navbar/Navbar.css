@@ -58,8 +58,6 @@ html{
   margin-left: 5px;
   cursor: pointer;
 }
-
-
 .drop-menu{
   position: absolute;
   top: 100%;
@@ -90,15 +88,13 @@ color: rgb(29, 44, 0);
 @media (max-width: 940px){
   .Nav-bar {
     justify-content: space-between;
+    height: auto;
     position: relative;
-  }
-
-  .navbar-left img {
-    margin: 0;
   }
   .profile-icon1{
     display: block;
   }
+  
   .navbar-left ul {
     display: none;
     flex-direction: column;
@@ -107,6 +103,8 @@ color: rgb(29, 44, 0);
     top: 60px;
     left: 0;
     width: 100%;
+
+    
   }
 
   .navbar-left ul.active {
@@ -114,8 +112,9 @@ color: rgb(29, 44, 0);
     flex-direction: column;
     position: absolute;
     top: 100%;
-    left: 100%;
+    left: 200px;
     z-index: 1000;
+    padding-bottom: 10px;
   }
 
   .hamburger {
@@ -136,78 +135,7 @@ color: rgb(29, 44, 0);
     display: block;
   }
   .active {
-    display: block;
-  }
-  .profile-icon{
-    font-size: 10px;
-  }
-  .navbar-right p{
-    display: none;
-  }
-  .small-screen-profile{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    cursor: pointer;
-  }.profile{
-    display: none;
-  }
-  .dropdown{
-    display: none;
-  }
-}
-/* Media Query for small screens */
-@media (max-width: 768px) {
-  .Nav-bar {
-    justify-content: space-between;
-    position: relative;
-  }
-
-  .navbar-left img {
-    margin: 0;
-  }
-  .profile-icon1{
-    display: block;
-  }
-  .navbar-left ul {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.8);
-    top: 60px;
-    left: 0;
-    width: 100%;
-  }
-
-  .navbar-left ul.active {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 100%;
-    z-index: 1000;
-  }
-
-  .hamburger {
-    display: block;
-    cursor: pointer;
-    font-size: 24px;
-    color: white;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-right: 20px;
-  }
-  .bellicon {
-    display: block;
-  }
-  .searchicon {
-    display: block;
-  }
-  .active {
+   
     display: block;
   }
   .profile-icon{
