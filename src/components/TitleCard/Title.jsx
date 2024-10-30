@@ -23,7 +23,7 @@ const Title = () => {
     })
   return (
     <div>
-        <div className="Cards-title">
+        <div className="Cards-title" id='MoviesSection'>
             <h2>Popular Movies</h2>
         </div>
         <div className="card-list">

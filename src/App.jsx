@@ -3,6 +3,7 @@ import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import Player from './pages/Player/Player';
 import { Routes, Route ,useNavigate} from 'react-router-dom';
+import ProfileSettings from './components/Profile/ProfileSettings';
 
 const App = () => {
   
@@ -26,6 +27,7 @@ const App = () => {
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
         <Route path='/Player/:id' element={<Player />}/>
+        <Route path='/ProfileSettings' element={<ProfileSettings />} />
       </Routes>
     </div>
   );

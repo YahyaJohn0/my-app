@@ -32,7 +32,7 @@ const Player = () => {
                 }
             })
             .catch(err => console.error(err));
-    }, [id]);  // Added dependency array
+    }); 
 
     return (
         <div className='player'>

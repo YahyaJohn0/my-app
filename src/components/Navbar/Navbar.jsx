@@ -4,6 +4,7 @@ import logo from "../../assets/logo.png";
 import profile from "../../assets/profile_img.png";
 import "./Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 import {
   faMagnifyingGlass,
   faBellConcierge,
@@ -31,20 +32,20 @@ const Navbar = () => {
           <img src={logo} alt="Logo" />
           <div className={`menu ${menu ? "active" : ""}`}>
             <ul className={menu ? "active" : ""}>
-              <li>
-                <a href="#">Home</a>
+            <li>
+                <Link to={'/'}>Home</Link> 
               </li>
               <li>
-                <a href="#">Tv Shows</a>
+                <a href="#MoviesSection">Tv Shows</a>
               </li>
               <li>
-                <a href="#">Movies</a>
+                <a href="#MoviesSection">Movies</a>
               </li>
               <li>
-                <a href="#">New & Popular</a>
+                <a href="#MoviesSection">New & Popular</a>
               </li>
               <li>
-                <a href="#">My List</a>
+               <Link to={'/ProfileSettings'}>My List</Link>
               </li>
             </ul>
           </div>
