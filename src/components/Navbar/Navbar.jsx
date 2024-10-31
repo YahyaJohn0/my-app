@@ -14,7 +14,7 @@ import {
 
 const Navbar = () => {
   const navigate = useNavigate();
-  const [menu, setMenuOpen] = useState(true);
+  const [menu, setMenuOpen] = useState(false);
 
   const handleSignOut = () => {
     localStorage.removeItem("token");
