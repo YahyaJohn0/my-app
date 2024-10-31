@@ -14,7 +14,7 @@ import {
 
 const Navbar = () => {
   const navigate = useNavigate();
-  const [menu, setMenuOpen] = useState(false);
+  const [menu, setMenuOpen] = useState(true);
 
   const handleSignOut = () => {
     localStorage.removeItem("token");
@@ -32,8 +32,8 @@ const Navbar = () => {
       <div className="Nav-bar">
         <div className="navbar-left">
           <img src={logo} alt="Logo" />
-          <div className={`menu ${menu ? "active" : ""}`}>
-            <ul className={menu ? "active" : ""}>
+          <div className={`left-menu ${menu ? "active" : ""}`}>
+            <ul className={`left-ul-tags ${menu ? "active" : ""}`}>
             <li>
                 <Link to={'/'}>Home</Link> 
               </li>

@@ -77,7 +77,13 @@
     height: 20px;
     margin-right: 5px;
 }
+@media (max-width: 968px) {
+    .hero-title {
+        padding-bottom: 30px;
+        padding-left: 20px; /* Reduce padding */
+    }
 
+}
 /* Responsive adjustments for small screens */
 @media (max-width: 768px) {
     .hero-banner {
@@ -86,7 +92,7 @@
     }
 
     .hero-title {
-        padding-bottom: 100px;
+        padding-bottom: 10px;
         padding-left: 20px; /* Reduce padding */
     }
 
